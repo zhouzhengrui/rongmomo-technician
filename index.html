@@ -53,6 +53,7 @@
         </div>
     </div>
     <!-- container start -->
+
     <!-- JavaScript start -->
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/fancyBox/jquery.fancybox.pack.js"></script>
@@ -67,13 +68,16 @@
     <script type="text/javascript" src="js/scripts.js"></script>
     <!-- JavaScript over -->
 
+    <!-- page js start -->
     <script>
         $(document).ready(function() {
-            $(".phoneNumber").focus(function(){
-                $(".bottomBox.hide").css("display", "block");
+            $(".phoneNumber").focus(function() {
+                $(".bottomBox.hide").removeClass("hide");
             });
         });
     </script>
+    <!-- page js over -->
+
 </body>
 
 </html>
