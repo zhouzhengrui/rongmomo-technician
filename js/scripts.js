@@ -1,8 +1,8 @@
 // fix:active
 document.body.addEventListener('touchstart', function() {});
 
-// info slider
-var infoSlide = new Swiper('#infoSlide', {
+// card info slider
+var cardSlide = new Swiper('#cardSlide', {
     effect: 'coverflow',
     initialSlide: 2,
     slidesPerView: 2,
@@ -11,11 +11,16 @@ var infoSlide = new Swiper('#infoSlide', {
     coverflow: {
         rotate: 0,
         stretch: -20,
-        depth: 60,
+        depth: 80,
         modifier: 2,
         slideShadows: false
     }
 });
+var infoSlide = new Swiper('#infoSlide', {
+    initialSlide: 2
+});
+cardSlide.params.control = infoSlide;
+infoSlide.params.control = cardSlide;
 
 // swiper tab
 var swiperTab = new Swiper('#swiperTab', {
