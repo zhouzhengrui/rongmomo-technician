@@ -1,12 +1,20 @@
 // fix:active
 document.body.addEventListener('touchstart', function() {});
 
-// swiper slideshow
-var swiperSlideshow = new Swiper('#swiperSlideshow', {
-    pagination: '.swiper-pagination',
-    autoHeight: true,
-    autoplay: 5000,
-    loop: true
+// info slider
+var infoSlide = new Swiper('#infoSlide', {
+    effect: 'coverflow',
+    initialSlide: 2,
+    slidesPerView: 2,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    coverflow: {
+        rotate: 0,
+        stretch: -20,
+        depth: 60,
+        modifier: 2,
+        slideShadows: false
+    }
 });
 
 // swiper tab
@@ -30,7 +38,7 @@ elems.forEach(function(html) {
 // jQuery plugin
 jQuery(document).ready(function($) {
 
-    
+
 
     // fancy box
     $(".fancyBox").fancybox({

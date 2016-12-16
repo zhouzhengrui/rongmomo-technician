@@ -18,6 +18,7 @@
 <body>
     <!-- container start -->
     <div class="container">
+        <!-- main start -->
         <div class="mainBox">
             <!-- logo start -->
             <div class="logoBox">
@@ -30,27 +31,26 @@
                     <div class="group">
                         <label class="label">+86</label>
                         <div class="input">
-                            <input class="phoneNumber" type="tel" placeholder="请输入手机号码">
+                            <input class="phone" type="tel" placeholder="请输入手机号码">
                         </div>
                     </div>
                     <div class="group">
                         <label class="label">验证码</label>
                         <div class="input">
-                            <input type="tel" placeholder="请输入验证码">
+                            <input class="code" type="tel" placeholder="请输入验证码">
                         </div>
+                        <button class="getCode" type="button" disabled>获取验证码</button>
                     </div>
                 </div>
                 <div class="buttonBox">
-                    <button class="button" type="button">技师登录</button>
+                    <button class="button login" type="button" disabled onclick="location.href='1-profit-service.html'">技师登录</button>
                 </div>
+                <!-- 验证提示 -->
+                <!-- <div class="alert alert-red">验证失败, 请重新输入</div> -->
             </div>
             <!-- login over -->
-            <!-- bottom button start -->
-            <div class="bottomBox hide">
-                <a class="button" href="#">发送验证码</a>
-            </div>
-            <!-- bottom button over -->
         </div>
+        <!-- main over -->
     </div>
     <!-- container start -->
 
@@ -68,15 +68,20 @@
     <script type="text/javascript" src="js/scripts.js"></script>
     <!-- JavaScript over -->
 
-    <!-- page js start -->
+    <!-- demo js start -->
     <script>
         $(document).ready(function() {
-            $(".phoneNumber").focus(function() {
-                $(".bottomBox.hide").removeClass("hide");
+            // 输入电话"获取验证码"样式可用
+            $('.phone').bind('keyup', function() {
+                $('.getCode').removeClass('disabled');
+            });
+            // 输入验证码"技师登录"样式可用
+            $('.code').bind('keyup', function() {
+                $('.login').removeAttr('disabled');
             });
         });
     </script>
-    <!-- page js over -->
+    <!-- demo js over -->
 
 </body>
 
