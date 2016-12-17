@@ -242,32 +242,6 @@ small {
   min-height: 64px;
 }
 
-.topBar .inner a.button {
-  position: absolute;
-  text-align: center;
-  z-index: 2;
-}
-
-.topBar .inner a.button i {
-  display: block;
-  width: 44px;
-  height: 44px;
-  line-height: 44px;
-  font-size: 18px;
-}
-
-.topBar .inner a.button:active {
-  color: #53c7c6;
-}
-
-.topBar .inner a.button.left {
-  left: 0;
-}
-
-.topBar .inner a.button.right {
-  right: 0;
-}
-
 .topBar .title {
   font-size: 18px;
   font-weight: normal;
@@ -346,6 +320,33 @@ small {
   color: #53c7c6;
   font-size: 14px;
   top: 6px;
+  right: 0;
+}
+
+.topBar a.button {
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+  color: #303137;
+}
+
+.topBar a.button i {
+  display: block;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 18px;
+}
+
+.topBar a.button:active {
+  color: #53c7c6;
+}
+
+.topBar a.button.left {
+  left: 0;
+}
+
+.topBar a.button.right {
   right: 0;
 }
 
