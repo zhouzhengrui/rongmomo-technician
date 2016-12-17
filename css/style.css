@@ -393,7 +393,7 @@ small {
   display: block;
   padding: 4px 0;
   color: #aeaeae;
-  text-align-last: center;
+  text-align: center;
 }
 
 .bottomBar .inner a.tab p {
