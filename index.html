@@ -19,40 +19,40 @@
     <!-- container start -->
     <div class="container">
         <!-- main start -->
-        <div class="mainBox">
+        <main class="main">
             <!-- logo start -->
-            <div class="logoBox">
+            <div class="logo-box">
                 <img src="img/logo@2x.png" alt="">
             </div>
             <!-- logo over -->
             <!-- login start -->
-            <div class="loginBox">
+            <div class="login-box">
                 <div class="inner">
-                    <div class="group">
+                    <div class="item">
                         <label class="label">+86</label>
                         <div class="input">
                             <input class="phone" type="tel" placeholder="请输入手机号码">
                         </div>
                     </div>
-                    <div class="group">
+                    <div class="item">
                         <label class="label">验证码</label>
                         <div class="input">
                             <input class="code" type="tel" placeholder="请输入验证码">
                         </div>
-                        <button class="getCode" type="button" disabled>获取验证码</button>
+                        <button class="get-code" type="button" disabled>获取验证码</button>
                     </div>
                 </div>
-                <div class="buttonBox">
+                <div class="button-box">
                     <button class="button login" type="button" disabled onclick="location.href='1-profit-service.html'">技师登录</button>
                 </div>
                 <!-- 验证提示 -->
                 <!-- <div class="alert alert-red">验证失败, 请重新输入</div> -->
             </div>
             <!-- login over -->
-        </div>
+        </main>
         <!-- main over -->
     </div>
-    <!-- container start -->
+    <!-- container over -->
 
     <!-- JavaScript start -->
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
@@ -73,7 +73,7 @@
         $(document).ready(function() {
             // 输入电话"获取验证码"样式可用
             $('.phone').bind('keyup', function() {
-                $('.getCode').removeClass('disabled');
+                $('.get-code').removeAttr('disabled');
             });
             // 输入验证码"技师登录"样式可用
             $('.code').bind('keyup', function() {

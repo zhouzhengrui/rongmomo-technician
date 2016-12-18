@@ -2,7 +2,7 @@
 document.body.addEventListener('touchstart', function() {});
 
 // card info slider
-var cardSlide = new Swiper('#cardSlide', {
+var cardSlide = new Swiper('#card-slide', {
     effect: 'coverflow',
     initialSlide: 2,
     slidesPerView: 2,
@@ -16,7 +16,7 @@ var cardSlide = new Swiper('#cardSlide', {
         slideShadows: false
     }
 });
-var infoSlide = new Swiper('#infoSlide', {
+var infoSlide = new Swiper('#info-slide', {
     initialSlide: 2
 });
 cardSlide.params.control = infoSlide;
