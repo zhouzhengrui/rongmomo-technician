@@ -8,6 +8,10 @@
 
 ## Update
 
+### 2016-12-20
+
+- 上传所有页面
+
 ### 2016-12-19
 
 - 上传技师端大部分页面, 剩余页面正在调整
@@ -20,14 +24,9 @@
 
 ## Plugin
 
-- [滑动(tab/slideshow) - swiper 3.3.1](http://www.swiper.com.cn/api/index.html)
-- [开关 - switchery](http://abpetkov.github.io/switchery/)
-- [弹出框 - fancyBox 2.1.5](http://fancyapps.com/fancybox/)
-- [单选复选框 - iCheck 1.0.2](http://www.bootcss.com/p/icheck/)
-- [侧滑导航 - mmenu 5.7.2](http://mmenu.frebsite.nl/)
-- [模态窗口 - ModalWindowEffects 1.0.0](https://github.com/codrops/ModalWindowEffects)
-- [星级评分 - raty 2.7.0](http://wbotelhos.com/raty)
-- [折叠面板 - jQuery Accordion 0.0.1](https://vctrfrnndz.github.io/jquery-accordion/)
+- [jQuery - 1.91](http://jquery.com/)
+- [滑动 - swiper 3.3.1](http://www.swiper.com.cn/api/index.html)
+- [提示框 - dark tooltip 0.4.0](http://rubentd.com/darktooltip/)
 
 [⬆ back to top](#readme)
 
@@ -58,6 +57,9 @@
 - 我 `3-user.html`
 - 我-我的评价 `3-user-comment.html`
 - 我-时间管理 `3-user-time.html`
+- 我-时间管理-详细 `3-user-time-content.html`
+- 我-时间管理-休息时间管理-日期 `3-user-time-manage-date.html`
+- 我-时间管理-休息时间管理-时间段 `3-user-time-manage-time.html`
 - 我-护理教程 `3-user-teaching.html`
 - 我-护理教程-教程介绍 `3-user-teaching-content.html`
 
