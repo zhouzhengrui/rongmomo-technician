@@ -38,6 +38,8 @@ html {
 body {
   -webkit-overflow-scrolling: touch;
   -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -244,9 +246,11 @@ header.header .inner {
   box-sizing: border-box;
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   height: 64px;
   min-height: 64px;
@@ -263,9 +267,11 @@ header.header .title {
 header.header nav.tabbar {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   width: 200px;
   margin: 0 auto;
@@ -275,6 +281,7 @@ header.header nav.tabbar {
 header.header nav.tabbar a {
   -webkit-flex: 1;
   -ms-flex: 1;
+  -webkit-box-flex: 1;
   flex: 1;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -307,9 +314,11 @@ header.header nav.tabbar a:active {
 header.header .title-select {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   position: relative;
   margin: 0 auto;
@@ -404,17 +413,27 @@ footer.footer .inner {
   box-sizing: border-box;
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 49px;
   min-height: 49px;
+  padding: 0 5px;
+  text-align: center;
 }
 
 footer.footer nav.tabbar a {
   -webkit-flex: 1;
   -ms-flex: 1;
+  -webkit-box-flex: 1;
   flex: 1;
   display: block;
   padding: 4px 0;
@@ -469,7 +488,7 @@ footer.footer a.button {
   width: 180px;
   height: 36px;
   line-height: 36px;
-  margin: 0 auto;
+  margin: 0 5px;
   border-radius: 18px;
   color: #ffffff;
   font-size: 14px;
@@ -568,9 +587,11 @@ span.label-orange {
 .login-box .item {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   border-bottom: 1px solid #eeeeee;
 }
@@ -588,6 +609,7 @@ span.label-orange {
 .login-box .input {
   -webkit-flex: 1;
   -ms-flex: 1;
+  -webkit-box-flex: 1;
   flex: 1;
 }
 
@@ -619,9 +641,11 @@ span.label-orange {
 .button-box {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
 }
 
@@ -637,6 +661,7 @@ span.label-orange {
   border-radius: 6px;
   -webkit-flex: 1;
   -ms-flex: 1;
+  -webkit-box-flex: 1;
   flex: 1;
 }
 
@@ -715,7 +740,6 @@ span.label-orange {
 
 .swiper-container-vertical > .swiper-wrapper {
   -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
   -ms-flex-direction: column;
   -webkit-flex-direction: column;
   flex-direction: column;
@@ -727,25 +751,20 @@ span.label-orange {
   height: 100%;
   z-index: 1;
   display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
-  -o-transition-property: -o-transform;
-  -ms-transition-property: -ms-transform;
+  transition-property: -webkit-transform;
   transition-property: transform;
+  transition-property: transform, -webkit-transform;
   -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 
 .swiper-container-android .swiper-slide,
 .swiper-wrapper {
   -webkit-transform: translate3d(0px, 0, 0);
-  -moz-transform: translate3d(0px, 0, 0);
-  -o-transform: translate(0px, 0px);
   -ms-transform: translate3d(0px, 0, 0);
   transform: translate3d(0px, 0, 0);
 }
@@ -760,9 +779,6 @@ span.label-orange {
 
 .swiper-container-free-mode > .swiper-wrapper {
   -webkit-transition-timing-function: ease-out;
-  -moz-transition-timing-function: ease-out;
-  -ms-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   margin: 0 auto;
 }
@@ -770,6 +786,7 @@ span.label-orange {
 .swiper-slide {
   -webkit-flex-shrink: 0;
   -ms-flex: 0 0 auto;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 100%;
   height: 100%;
@@ -788,10 +805,10 @@ span.label-orange {
   -webkit-align-items: flex-start;
   align-items: flex-start;
   -webkit-transition-property: -webkit-transform, height;
-  -moz-transition-property: -moz-transform;
-  -o-transition-property: -o-transform;
-  -ms-transition-property: -ms-transform;
+  -webkit-transition-property: height, -webkit-transform;
+  transition-property: height, -webkit-transform;
   transition-property: transform, height;
+  transition-property: transform, height, -webkit-transform;
 }
 
 /* a11y */
@@ -825,8 +842,6 @@ span.label-orange {
   margin-top: -22px;
   z-index: 10;
   cursor: pointer;
-  -moz-background-size: 27px 44px;
-  -webkit-background-size: 27px 44px;
   background-size: 27px 44px;
   background-position: center;
   background-repeat: no-repeat;
@@ -878,12 +893,9 @@ span.label-orange {
   position: absolute;
   text-align: center;
   -webkit-transition: 300ms;
-  -moz-transition: 300ms;
-  -o-transition: 300ms;
   transition: 300ms;
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   z-index: 10;
 }
@@ -915,6 +927,7 @@ button.swiper-pagination-bullet {
   border: none;
   margin: 0;
   padding: 0;
+  -webkit-box-shadow: none;
   box-shadow: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -947,8 +960,6 @@ button.swiper-pagination-bullet {
   right: 10px;
   top: 50%;
   -webkit-transform: translate3d(0px, -50%, 0);
-  -moz-transform: translate3d(0px, -50%, 0);
-  -o-transform: translate(0px, -50%);
   -ms-transform: translate3d(0px, -50%, 0);
   transform: translate3d(0px, -50%, 0);
 }
@@ -977,20 +988,15 @@ button.swiper-pagination-bullet {
   height: 100%;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
-  -o-transform: scale(0);
   transform: scale(0);
   -webkit-transform-origin: left top;
-  -moz-transform-origin: left top;
   -ms-transform-origin: left top;
-  -o-transform-origin: left top;
   transform-origin: left top;
 }
 
 .swiper-container-rtl .swiper-pagination-progress .swiper-pagination-progressbar {
   -webkit-transform-origin: right top;
-  -moz-transform-origin: right top;
   -ms-transform-origin: right top;
-  -o-transform-origin: right top;
   transform-origin: right top;
 }
 
@@ -1023,7 +1029,6 @@ button.swiper-pagination-bullet {
 /* 3D Container */
 .swiper-container-3d {
   -webkit-perspective: 1200px;
-  -moz-perspective: 1200px;
   -o-perspective: 1200px;
   perspective: 1200px;
 }
@@ -1036,8 +1041,6 @@ button.swiper-pagination-bullet {
 .swiper-container-3d .swiper-slide-shadow-bottom,
 .swiper-container-3d .swiper-cube-shadow {
   -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
@@ -1059,10 +1062,9 @@ button.swiper-pagination-bullet {
   /* Safari 4+, Chrome */
   background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.5), transparent);
   /* Chrome 10+, Safari 5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(right, rgba(0, 0, 0, 0.5), transparent);
   /* Firefox 3.6-15 */
-  background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.5), transparent);
   /* Opera 11.10-12.00 */
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(transparent));
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), transparent);
   /* Firefox 16+, IE10, Opera 12.50+ */
 }
@@ -1072,10 +1074,9 @@ button.swiper-pagination-bullet {
   /* Safari 4+, Chrome */
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), transparent);
   /* Chrome 10+, Safari 5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), transparent);
   /* Firefox 3.6-15 */
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), transparent);
   /* Opera 11.10-12.00 */
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(transparent));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
   /* Firefox 16+, IE10, Opera 12.50+ */
 }
@@ -1085,10 +1086,9 @@ button.swiper-pagination-bullet {
   /* Safari 4+, Chrome */
   background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5), transparent);
   /* Chrome 10+, Safari 5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.5), transparent);
   /* Firefox 3.6-15 */
-  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), transparent);
   /* Opera 11.10-12.00 */
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(transparent));
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
   /* Firefox 16+, IE10, Opera 12.50+ */
 }
@@ -1098,10 +1098,9 @@ button.swiper-pagination-bullet {
   /* Safari 4+, Chrome */
   background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
   /* Chrome 10+, Safari 5.1+, iOS 5+ */
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
   /* Firefox 3.6-15 */
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
   /* Opera 11.10-12.00 */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
   /* Firefox 16+, IE10, Opera 12.50+ */
 }
@@ -1123,8 +1122,6 @@ button.swiper-pagination-bullet {
 .swiper-container-flip .swiper-slide {
   pointer-events: none;
   -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 1;
 }
@@ -1151,8 +1148,6 @@ button.swiper-pagination-bullet {
 .swiper-container-flip .swiper-slide-shadow-right {
   z-index: 0;
   -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -1160,7 +1155,6 @@ button.swiper-pagination-bullet {
 .swiper-container-cube .swiper-slide {
   visibility: hidden;
   -webkit-transform-origin: 0 0;
-  -moz-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
   transform-origin: 0 0;
   width: 100%;
@@ -1169,7 +1163,6 @@ button.swiper-pagination-bullet {
 
 .swiper-container-cube.swiper-container-rtl .swiper-slide {
   -webkit-transform-origin: 100% 0;
-  -moz-transform-origin: 100% 0;
   -ms-transform-origin: 100% 0;
   transform-origin: 100% 0;
 }
@@ -1198,17 +1191,12 @@ button.swiper-pagination-bullet {
 /* Fade */
 .swiper-container-fade.swiper-container-free-mode .swiper-slide {
   -webkit-transition-timing-function: ease-out;
-  -moz-transition-timing-function: ease-out;
-  -ms-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
 
 .swiper-container-fade .swiper-slide {
   pointer-events: none;
   -webkit-transition-property: opacity;
-  -moz-transition-property: opacity;
-  -o-transition-property: opacity;
   transition-property: opacity;
 }
 
@@ -1272,10 +1260,9 @@ button.swiper-pagination-bullet {
   margin-top: -21px;
   z-index: 10;
   -webkit-transform-origin: 50%;
-  -moz-transform-origin: 50%;
+  -ms-transform-origin: 50%;
   transform-origin: 50%;
   -webkit-animation: swiper-preloader-spin 1s steps(12, end) infinite;
-  -moz-animation: swiper-preloader-spin 1s steps(12, end) infinite;
   animation: swiper-preloader-spin 1s steps(12, end) infinite;
 }
 
@@ -1286,7 +1273,6 @@ button.swiper-pagination-bullet {
   height: 100%;
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%236c6c6c'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
   background-position: 50%;
-  -webkit-background-size: 100%;
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -1303,6 +1289,7 @@ button.swiper-pagination-bullet {
 
 @keyframes swiper-preloader-spin {
   100% {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
@@ -1316,10 +1303,15 @@ button.swiper-pagination-bullet {
 .title-box {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 12px 15px;
   font-size: 14px;
@@ -1339,10 +1331,15 @@ button.swiper-pagination-bullet {
 .title-box.link a {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
   min-height: 44px;
@@ -1391,6 +1388,7 @@ button.swiper-pagination-bullet {
 .title-box .flex-1 {
   -webkit-flex: 1;
   -ms-flex: 1;
+  -webkit-box-flex: 1;
   flex: 1;
 }
 
@@ -1415,10 +1413,15 @@ button.swiper-pagination-bullet {
 .sub-title-box .row {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 4px;
 }
@@ -1438,6 +1441,7 @@ button.swiper-pagination-bullet {
 .card-info-slide {
   background: #53c7c6;
   background: -webkit-linear-gradient(#53c7c6, #90e4ee);
+  background: -webkit-gradient(linear, left top, left bottom, from(#53c7c6), to(#90e4ee));
   background: linear-gradient(#53c7c6, #90e4ee);
 }
 
@@ -1475,6 +1479,7 @@ button.swiper-pagination-bullet {
 
 .card-info-slide .card-slide-group .card {
   border-radius: 4px;
+  -webkit-box-shadow: 0 0 8px #39aead;
   box-shadow: 0 0 8px #39aead;
 }
 
@@ -1504,10 +1509,15 @@ button.swiper-pagination-bullet {
 .card-info-slide .card-slide-group .bar {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 11px 12px;
   background-color: #fff;
@@ -1527,15 +1537,18 @@ button.swiper-pagination-bullet {
 .card-info-slide .info-slide-group {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
 }
 
 .card-info-slide .info-slide-group .column {
   -webkit-flex: 1;
   -ms-flex: 1;
+  -webkit-box-flex: 1;
   flex: 1;
   padding-bottom: 8px;
   color: #ffffff;
@@ -1566,9 +1579,11 @@ main.main > nav.tabbar {
 main.main > nav.tabbar .inner {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   height: 54px;
 }
@@ -1576,6 +1591,7 @@ main.main > nav.tabbar .inner {
 main.main > nav.tabbar a {
   -webkit-flex: 1;
   -ms-flex: 1;
+  -webkit-box-flex: 1;
   flex: 1;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1639,10 +1655,15 @@ section.group .info {
 section.group .info .row {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: flex-start;
   -ms-flex-align: flex-start;
+  -webkit-box-align: start;
   align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   min-height: 19px;
   margin-bottom: 4px;
@@ -1670,9 +1691,11 @@ section.group .info .title {
 section.group .toolbar {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   min-height: 44px;
   margin-top: 14px;
@@ -1681,6 +1704,7 @@ section.group .toolbar {
 section.group .toolbar a.button {
   -webkit-flex: 1;
   -ms-flex: 1;
+  -webkit-box-flex: 1;
   flex: 1;
   text-align: center;
   color: #53c7c6;
@@ -1727,9 +1751,11 @@ section.group .red {
 .stepBox {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   min-height: 75px;
   border-top: 1px solid #eeeeee;
@@ -1738,6 +1764,7 @@ section.group .red {
 .stepBox .column {
   -webkit-flex: 1;
   -ms-flex: 1;
+  -webkit-box-flex: 1;
   flex: 1;
   position: relative;
   text-align: center;
@@ -1773,6 +1800,7 @@ section.group .red {
   height: 8px;
   background-color: #53c7c6;
   -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
@@ -1823,14 +1851,21 @@ section.group .red {
 section.panel {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   padding-bottom: 10px;
   background: #53c7c6;
   background: -webkit-linear-gradient(#53c7c6, #90e4ee);
+  background: -webkit-gradient(linear, left top, left bottom, from(#53c7c6), to(#90e4ee));
   background: linear-gradient(#53c7c6, #90e4ee);
 }
 
@@ -1885,9 +1920,11 @@ section.panel .info .number {
 section.calendar header.week {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   height: 44px;
 }
@@ -1895,6 +1932,7 @@ section.calendar header.week {
 section.calendar header.week p {
   -webkit-flex: 1;
   -ms-flex: 1;
+  -webkit-box-flex: 1;
   flex: 1;
   font-size: 12px;
   text-align: center;
@@ -1904,9 +1942,11 @@ section.calendar header.week p {
 section.calendar main.day .row {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
 }
 
@@ -1915,6 +1955,7 @@ section.calendar main.day .column {
   box-sizing: border-box;
   -webkit-flex: 1;
   -ms-flex: 1;
+  -webkit-box-flex: 1;
   flex: 1;
   padding-top: 8px;
   padding-bottom: 7px;
@@ -1949,13 +1990,21 @@ section.calendar main.day .breath:before {
   background-color: #fbe157;
 }
 
-section.calendar main.day .rest {
-  color: #f95b45;
+section.calendar main.day .rest .date {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 26px;
+  border-radius: 50%;
+  border: 1.5px solid #fbe157;
   background-color: #fbe157;
 }
 
-section.calendar main.day .rest:active {
-  background-color: #fad825;
+section.calendar main.day .today .date {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 26px;
+  border-radius: 50%;
+  border: 1.5px solid #53c7c6;
 }
 
 section.calendar main.day .label {
@@ -1975,14 +2024,6 @@ section.calendar main.day .label.black {
   color: #4a4a4a;
 }
 
-section.calendar main.day .today .date {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  line-height: 26px;
-  border-radius: 50%;
-  border: 1.5px solid #53c7c6;
-}
-
 section.calendar main.day .disabled-empty {
   background-color: #f5f6f7;
 }
@@ -1990,17 +2031,6 @@ section.calendar main.day .disabled-empty {
 section.calendar main.day .disabled {
   position: relative;
   background-color: #f5f6f7;
-}
-
-section.calendar main.day .disabled:before {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background-color: #d7d7d7;
 }
 
 section.calendar main.day .active {
@@ -2049,10 +2079,12 @@ section.calendar footer.explain p span.breath {
 }
 
 section.calendar footer.explain p span.rest {
+  border-radius: 50%;
   background-color: #fbe157;
 }
 
 section.calendar footer.explain p span.usable {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   background-color: #ffffff;
 }
@@ -2062,11 +2094,11 @@ section.calendar footer.explain p span.selected {
 }
 
 section.calendar footer.explain p span.locking {
+  border-radius: 50%;
   background-color: #fbe157;
 }
 
 section.calendar footer.explain p span.disabled {
-  border-left: 4px solid #d7d7d7;
   background-color: #f5f6f7;
 }
 
@@ -2176,15 +2208,19 @@ section.calendar-slide.shadow {
 section.calendar-time .inner {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   -webkit-justify-content: center;
   -ms-justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 20px 0;
 }
@@ -2205,8 +2241,8 @@ section.calendar-time .item {
 
 section.calendar-time .item.busy {
   color: #ffffff;
-  border-color: #8fdada;
-  background-color: #8fdada;
+  border-color: #2ECC71;
+  background-color: #2ECC71;
 }
 
 section.calendar-time .item.rest {
@@ -2256,7 +2292,7 @@ section.calendar-time footer.explain span.icon {
 }
 
 section.calendar-time footer.explain span.busy {
-  background-color: #8fdada;
+  background-color: #2ECC71;
 }
 
 section.calendar-time footer.explain span.rest {
@@ -2290,12 +2326,16 @@ section.calendar-time.shadow {
 section.calendar-switch {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   -webkit-justify-content: space-between;
   -ms-justify-content: space-between;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -2332,9 +2372,11 @@ section.calendar-switch.shadow {
 .list .item {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   position: relative;
   padding-left: 15px;
@@ -2348,9 +2390,11 @@ section.calendar-switch.shadow {
 .list .item > .image {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   width: 50px;
   height: 50px;
@@ -2365,6 +2409,9 @@ section.calendar-switch.shadow {
 }
 
 .list a.item .row:before {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
   order: 1;
   color: #d7d7d7;
   margin-left: 10px;
@@ -2392,13 +2439,19 @@ section.calendar-switch.shadow {
 .list .row {
   -webkit-flex: 1;
   -ms-flex: 1;
+  -webkit-box-flex: 1;
   flex: 1;
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
   padding: 12px 15px 12px 0;
@@ -2410,9 +2463,11 @@ section.calendar-switch.shadow {
 .list .column {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   overflow: hidden;
 }
@@ -2420,9 +2475,11 @@ section.calendar-switch.shadow {
 .list .column .image {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   width: 36px;
   height: 36px;
@@ -2448,10 +2505,15 @@ section.calendar-switch.shadow {
 .list .flex-1 {
   -webkit-flex: 1;
   -ms-flex: 1;
+  -webkit-box-flex: 1;
   flex: 1;
 }
 
 .list .flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -2535,10 +2597,15 @@ section.calendar-switch.shadow {
 .list-card .row {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -2556,6 +2623,7 @@ section.calendar-switch.shadow {
 .list-card main {
   -webkit-align-items: flex-start;
   -ms-flex-align: flex-start;
+  -webkit-box-align: start;
   align-items: flex-start;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
@@ -2564,9 +2632,11 @@ section.calendar-switch.shadow {
 .list-card main a.link {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: flex-start;
   -ms-flex-align: flex-start;
+  -webkit-box-align: start;
   align-items: flex-start;
   width: 100%;
   padding: 12px 12px 9px;
@@ -2587,10 +2657,15 @@ section.calendar-switch.shadow {
 .list-card main .title {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 2px;
   font-size: 16px;
@@ -2631,10 +2706,15 @@ section.calendar-switch.shadow {
 .list-card footer .inner {
   display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
   min-height: 44px;
@@ -2670,6 +2750,7 @@ section.calendar-switch.shadow {
 .list-card .flex-1 {
   -webkit-flex: 1;
   -ms-flex: 1;
+  -webkit-box-flex: 1;
   flex: 1;
 }
 
@@ -2731,8 +2812,6 @@ a.more-load:active {
   padding: 4px 14px;
   font-size: 12px;
   max-width: 150px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
   border-radius: 20px;
 }
 
@@ -2744,8 +2823,6 @@ a.more-load:active {
   padding: 10px;
   font-size: 14px;
   max-width: 200px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
 }
 
@@ -2753,13 +2830,12 @@ a.more-load:active {
   padding: 16px;
   font-size: 16px;
   max-width: 250px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
   border-radius: 6px;
 }
 
 /* Tips */
 .dark-tooltip .tip {
+  -ms-transform: scale(1.01);
   transform: scale(1.01);
   -webkit-transform: scale(1.01);
   transform: scale(1.01);
@@ -2870,9 +2946,6 @@ a.more-load:active {
   float: left;
   margin: 5px;
   min-width: 25px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px;
 }
 
@@ -2953,10 +3026,8 @@ a.more-load:active {
 
 .animated {
   -webkit-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation-duration: 0.5s;
-  -ms-animation-duration: 0.5s;
   animation-duration: 0.5s;
 }
 
